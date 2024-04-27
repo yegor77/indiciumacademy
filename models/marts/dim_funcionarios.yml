@@ -9,3 +9,20 @@ models:
         tests:
           - unique
           - not_null
+      - name: NM_FUNCIONARIO
+        description: Nome do funcionário
+
+      - name: CARGO_FUNCIONARIO
+        description: Cargo do funcionário
+
+      - name: DT_NASCIMENTO_FUNCIONARIO
+        description: Data de nascimento do funcionário
+
+      - name: DT_CONTRATACAO
+        description: Data de contratação.
+
+      - name: nm_gerente
+        description: Nome do gerente.
+
+      - name: cargo_gerente
+        description: Cargo do gerente.
