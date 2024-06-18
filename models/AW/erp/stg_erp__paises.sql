@@ -5,6 +5,4 @@ with
             , cast(NAME AS string)              AS nm_pais
 FROM {{ source('erp', 'COUNTRYREGION') }}
 )
-select *
-from fonte_paises
-;
+select * from fonte_paises

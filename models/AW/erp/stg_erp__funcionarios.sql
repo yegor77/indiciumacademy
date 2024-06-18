@@ -1,5 +1,5 @@
     with
-    fonte_funcionarios as (
+    fonte_funcionarios AS (
         select
             cast(BUSINESSENTITYID AS int)           AS BUSINESSENTITYID
             , cast(JOBTITLE AS string)              AS funcionario_cargo
@@ -22,6 +22,4 @@
             , split_part(ORGANIZATIONNODE,'/',5)    AS nivel_5
             FROM {{ source('erp', 'EMPLOYEE') }}
 )
-select *
-from fonte_funcionarios
-;
+select * from fonte_funcionarios

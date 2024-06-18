@@ -9,4 +9,3 @@ FROM {{ source('erp', 'ADDRESS') }}
     )
 select *
 from fonte_enderecos
-;

@@ -1,9 +1,9 @@
-    with
-    fonte_produtos as (
+with
+    fonte_produtos AS (
         select
-            cast(PRODUCTID as int)              AS PRODUCTID
-            , cast(NAME as string)              AS nm_produto
-            , cast(PRODUCTNUMBER as string)     AS cod_produto
+            cast(PRODUCTID AS int)              AS PRODUCTID
+            , cast(NAME AS string)              AS nm_produto
+            , cast(PRODUCTNUMBER AS string)     AS cod_produto
             , MAKEFLAG                          AS sn_fabricado_pela_empresa
             , FINISHEDGOODSFLAG                 AS sn_pode_ser_vendido
             , case
@@ -27,7 +27,7 @@
                 when WEIGHT is not null then WEIGHT||' '||WEIGHTUNITMEASURECODE
                 else 'Não se aplica'
             end                                 AS unid_peso
-            , cast(DAYSTOMANUFACTURE as int)    AS prod_dias_fabricacao
+            , cast(DAYSTOMANUFACTURE AS int)    AS prod_dias_fabricacao
             , case
                 when PRODUCTLINE = 'R' then 'Estrada'
                 when PRODUCTLINE = 'M' then 'Montanha'
@@ -47,10 +47,8 @@
                 when STYLE = 'U' then 'Unisex'
                 else 'Não se aplica'
             end                                 AS prod_estilo
-            , cast(PRODUCTSUBCATEGORYID as int) AS PRODUCTSUBCATEGORYID
-            , cast(PRODUCTMODELID as int)       AS PRODUCTMODELID
+            , cast(PRODUCTSUBCATEGORYID AS int) AS PRODUCTSUBCATEGORYID
+            , cast(PRODUCTMODELID AS int)       AS PRODUCTMODELID
 FROM {{ source('erp', 'PRODUCT') }}
 )
-select *
-from fonte_produtos
-;
+select * from fonte_produtos

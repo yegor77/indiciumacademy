@@ -33,6 +33,4 @@ with
             , cast(TOTALDUE as numeric(18,2))   AS check_total_pedido
 FROM {{ source('erp', 'SALESORDERHEADER') }}
 )
-select *
-from fonte_pedidos
-;
+select * from fonte_pedidos

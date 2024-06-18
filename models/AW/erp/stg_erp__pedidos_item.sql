@@ -10,6 +10,4 @@ with
             , cast(UNITPRICEDISCOUNT AS numeric(18,2))  AS desconto_perc
 FROM {{ source('erp', 'SALESORDERDETAIL') }}
 )
-select *
-from fonte_pedidos_itens
-;
+select * from fonte_pedidos_itens

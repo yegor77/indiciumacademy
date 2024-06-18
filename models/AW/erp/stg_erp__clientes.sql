@@ -7,6 +7,5 @@ with
             , cast(TERRITORYID as int)  AS TERRITORYID
 FROM {{ source('erp', 'CUSTOMER') }}
 )
-select *
-from fonte_clientes
-;
+
+select * from fonte_clientes

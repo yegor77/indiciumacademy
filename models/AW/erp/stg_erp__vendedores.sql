@@ -1,4 +1,4 @@
-    with
+with
     fonte_vendedores AS (
         select
             cast(BUSINESSENTITYID AS int)           AS BUSINESSENTITYID
@@ -10,6 +10,4 @@
             , cast(SALESLASTYEAR AS numeric(18,2))  AS vendas_LY
 FROM {{ source('erp', 'SALESPERSON') }}
 )
-select *
-from fonte_vendedores
-;
+select * from fonte_vendedores

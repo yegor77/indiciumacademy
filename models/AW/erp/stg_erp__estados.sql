@@ -1,4 +1,4 @@
-with
+ with
     fonte_estados AS (
         select
             cast(STATEPROVINCEID AS int)                AS STATEPROVINCEID
@@ -9,6 +9,5 @@ with
             , cast(NAME AS string)                      AS nm_estado
 FROM {{ source('erp', 'STATEPROVINCE') }}
     )
-select *
-from fonte_estados
-;
+    
+select * from fonte_estados

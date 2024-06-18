@@ -1,5 +1,5 @@
     with
-    fonte_pessoas as (
+    fonte_pessoas AS (
         select
             cast(BUSINESSENTITYID as int)   AS BUSINESSENTITYID
             ,cast(PERSONTYPE as varchar)   AS ind_tipo_pessoa
@@ -19,6 +19,4 @@
             end as nm_pessoa
 FROM {{ source('erp', 'PERSON') }}
 )
-select *
-from fonte_pessoas
-;
+select * from fonte_pessoas
