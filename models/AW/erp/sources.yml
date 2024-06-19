@@ -1,0 +1,17 @@
+version: 2
+sources:
+  - name: erp
+    database: FEA24_4
+    schema: raw_adventure_works
+    tables:
+      - name: CUSTOMER
+      - name: PERSON
+      - name: EMPLOYEE
+      - name: SALESREASON
+      - name: SALESPERSON
+      - name: STATEPROVINCE
+      - name: ADDRESS
+      - name: COUNTRYREGION
+      - name: SALESORDERHEADER
+      - name: SALESORDERDETAIL
+      - name: PRODUCT
