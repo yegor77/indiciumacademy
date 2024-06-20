@@ -15,3 +15,5 @@ sources:
       - name: SALESORDERHEADER
       - name: SALESORDERDETAIL
       - name: PRODUCT
+      - name: CREDITCARD
+      - name: PERSONCREDITCARD
