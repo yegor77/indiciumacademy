@@ -19,3 +19,4 @@ sources:
       - name: PERSONCREDITCARD
       - name: PRODUCTSUBCATEGORY
       - name: PRODUCTCATEGORY
+      - name: SALESORDERHEADERSALESREASON
