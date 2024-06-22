@@ -1,9 +1,8 @@
 with
     fonte_cartoes AS (
         select
-            cast(BUSINESSENTITYID AS int)   AS BUSINESSENTITYID
-            , cast(CREDITCARDID AS int)     AS CREDITCARDID
-FROM {{ source('erp', 'PERSONCREDITCARD') }}
+                cast(CREDITCARDID as int)   AS CREDITCARDID
+            , cast(CARDTYPE as string)      AS nm_cartao
+FROM {{ source('erp', 'CREDITCARD') }}
 )
-
 select * from fonte_cartoes
