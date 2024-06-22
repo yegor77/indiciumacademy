@@ -17,3 +17,5 @@ sources:
       - name: PRODUCT
       - name: CREDITCARD
       - name: PERSONCREDITCARD
+      - name: PRODUCTSUBCATEGORY
+      - name: PRODUCTCATEGORY
