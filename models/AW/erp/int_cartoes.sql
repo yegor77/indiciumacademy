@@ -32,7 +32,7 @@ joined AS (
 
 chaves AS (
     SELECT
-        hash(CREDITCARDID)  AS pk_cartao,
+        hash(CREDITCARDID)  AS FK_cartao,
         CREDITCARDID        AS cd_cartao,
         NM_CARTAO,
         BUSINESSENTITYID    AS cd_pessoa_cartao,
@@ -44,7 +44,7 @@ chaves AS (
     UNION ALL
 
     SELECT
-        hash(0)             AS pk_cartao,
+        hash(0)             AS FK_cartao,
         0                   AS cd_cartao,
         'Não cadastrado'    AS NM_CARTAO,
         NULL                AS cd_pessoa_cartao,

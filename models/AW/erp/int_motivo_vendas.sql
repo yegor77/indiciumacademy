@@ -22,7 +22,7 @@ with
 
     , chaves as (
         select
-            hash(SALESORDERID) as fk_pedido
+            hash(SALESORDERID) as FK_pedido
             , SALESORDERID as cd_pedido
             , SALESREASONID as cd_motivo_venda
             , DESC_MOTIVO_VENDA

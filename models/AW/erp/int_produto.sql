@@ -43,7 +43,7 @@ subcategoria_produtos AS (
 
     , chaves as (
 SELECT
-    hash(PRODUCTID)                  AS pk_produto
+    hash(PRODUCTID)                  AS FK_produto
     , NM_PRODUTO
     , COD_PRODUTO
     , SN_FABRICADO_PELA_EMPRESA

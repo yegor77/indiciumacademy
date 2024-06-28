@@ -33,7 +33,7 @@
 
 , chaves as (
     select
-            hash(ADDRESSID)     AS pk_endereco
+            hash(ADDRESSID)     AS FK_endereco
             ,DESC_CIDADE
             ,CD_ESTADO
             ,COUNTRYREGIONCODE
