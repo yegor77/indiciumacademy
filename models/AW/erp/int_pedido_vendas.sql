@@ -43,13 +43,14 @@ pedidos_capa.SALESORDERID
 
 , tabela_full AS (
     SELECT
-        hash(SALESORDERID)            AS fk_pedido
-        , hash(CUSTOMERID)            AS fk_cliente
-        , hash(SALESPERSONID)         AS fk_vendedor
-        , hash(CREDITCARDID)          AS PK_CARTAO
-        , hash(ADDRESSID)             AS PK_ENDERECO
-        , hash(SALESORDERDETAILID)    AS pk_item_pedido
-        , hash(PRODUCTID)             AS PK_PRODUTO
+        hash(SALESORDERID)            AS FK_pedido
+        , hash(CUSTOMERID)            AS FK_cliente
+        , hash(SALESPERSONID)         AS FK_vendedor
+        , hash(CREDITCARDID)          AS FK_CARTAO
+        , hash(ADDRESSID)             AS FK_ENDERECO
+        , hash(SALESORDERDETAILID)    AS FK_item_pedido
+        , hash(PRODUCTID)             AS FK_PRODUTO
+        , SALESORDERID
         , TERRITORYID
         , SHIPMETHODID
         , SPECIALOFFERID
