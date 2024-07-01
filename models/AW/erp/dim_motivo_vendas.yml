@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dim_motivo_vendas
+    description:
+      Tabela dimensão com informações de motivos das vendas da AdventureWorks.
+    columns:
+      - name: FK_PEDIDO
+        description: Chave primária da dimensão de motivo das vendas.
+        tests:
+          - not_null
