@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: dim_produtos
+    description:
+      Tabela dimensão com informações de produtos da AdventureWorks.
+    columns:
+      - name: FK_PRODUTO
+        description: Chave primária da dimensão de produtos.
+        tests:
+          - unique
+          - not null
