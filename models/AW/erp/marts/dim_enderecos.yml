@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: dim_enderecos
+    description:
+      Tabela dimensão com informações de enderecos da AdventureWorks.
+    columns:
+      - name: FK_ENDERECO
+        description: Chave primária da dimensão de enderecos.
+        tests:
+          - unique
+          - not_null
+      - name: Desc. cidade
+        description: Define a descrição da cidade
+      - name: Cód. estado
+        description: Define o ID Código do estado
+      - name: Cód. regiao pais
+        description: Define o ID Código da região pais
+      - name: Flag pais sem estado
+        description: Define se o pais não tem estado
+      - name: Desc. estado
+        description: Define a descrição do estado
+      - name: Cód. territorio
+        description: Define o ID Código do territorio
+      - name: Desc. pais
+        description: Define a descrição do pais

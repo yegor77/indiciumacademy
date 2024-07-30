@@ -30,13 +30,14 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_northwind:
     # Applies to all files under models/example/
-    marts:
-      +materialized: table
-      +schema: marts
+    erp:
+      +materialized: view
+      
       intermediate:
         +materialized: view
-        +schema: intermediate
-    staging:
-      +schema: staging
-      erp:
+    
+      marts:
+        +materialized: view
+    
+      stagging:
         +materialized: view

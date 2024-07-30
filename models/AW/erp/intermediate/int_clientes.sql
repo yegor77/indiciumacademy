@@ -19,7 +19,7 @@
     ,pessoas.NM_PESSOA                 AS NM_LOJA
 FROM 
     cliente
-INNER JOIN 
+LEFT JOIN 
     pessoas
 ON 
     cliente.PERSONID = pessoas.BUSINESSENTITYID
