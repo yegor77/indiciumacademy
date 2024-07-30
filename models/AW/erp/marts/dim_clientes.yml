@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: dim_clientes
+    description:
+      Tabela dimensão com informações de clientes da AdventureWorks.
+    columns:
+      - name: FK_CLIENTE
+        description: Chave primária da dimensão de clientes.
+        tests:
+          - unique
+          - not_null
+      - name: Cód. da loja
+        description: Define o ID Código da Loja/ Cliente
+      - name: Cód. territorio
+        description: Define o ID Código do território
+      - name: Cód. pessoa
+        description: Define o ID Código pessoa
+      - name: Tp de cliente
+        description: Define entre uma compra de Loja e/ou Varejo
+      - name: Nome da loja
+        description: Define o nome da loja/ cliente

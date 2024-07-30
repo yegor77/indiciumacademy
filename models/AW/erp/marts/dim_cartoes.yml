@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: dim_cartoes
+    description:
+      Tabela dimensão com informações de cartões da AdventureWorks.
+    columns:
+      - name: FK_CARTAO
+        description: Chave primária da dimensão de cartões.
+        tests:
+          - unique
+          - not_null
+
+      - name: Cód. do cartao
+        description: Define o ID Código do cartão
+      - name: Desc. cartao
+        description: Define a descrição do cartão
+      - name: Cód. cartao pessoa
+        description: Define o ID Código do cartão-pessoa
+      - name: Tp pessoa cartao
+        description: Define entre uma compra de Loja e/ou Varejo
+      - name: Cód. tp. pessoa cartao
+        description: Define o tipo do cartão-pessoa
+      - name: Nome da pessoa cartao
+        description: Define o nome do cartão-cliente
