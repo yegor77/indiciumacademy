@@ -1,11 +1,42 @@
-WITH
+    with
+    cliente as (
+        select *
+    FROM {{ ref('stg_erp__clientes') }}
+    )
 
-dim_clientes AS (
-    SELECT *
-    FROM {{ ref('int_clientes') }}
+    , pessoas as (
+        select *
+    FROM {{ ref('stg_erp__pessoas') }}
+    )
+
+    , cliente_pessoa AS (
+        SELECT 
+    cliente.CUSTOMERID
+    ,cliente.STOREID
+    ,cliente.TERRITORYID
+    ,cliente.PERSONID
+    ,pessoas.TIPO_PESSOA               AS TP_CLIENTE
+    ,pessoas.NM_PESSOA                 AS NM_LOJA
+FROM 
+    cliente
+LEFT JOIN 
+    pessoas
+ON 
+    cliente.PERSONID = pessoas.BUSINESSENTITYID
+    )
+    
+, uniao_tabelas as(
+SELECT
+    hash(CUSTOMERID)  AS FK_cliente
+    , STOREID
+    , TERRITORYID
+    , PERSONID
+    , TP_CLIENTE
+    , NM_LOJA   
+FROM cliente_pessoa
 ),
 
-cz_clientes as (
+dimensao_cliente as (
     SELECT
     FK_CLIENTE
     , STOREID           AS "Cód. da loja"
@@ -13,7 +44,7 @@ cz_clientes as (
     , PERSONID          AS "Cód. pessoa"
     , TP_CLIENTE        AS "Tp de cliente"
     , NM_LOJA           AS "Nome da loja"
-    from dim_clientes
+    from uniao_tabelas
 )
 
-SELECT * FROM cz_clientes
+SELECT * FROM dimensao_cliente
