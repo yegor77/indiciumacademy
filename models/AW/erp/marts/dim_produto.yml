@@ -10,35 +10,51 @@ models:
         tests:
           - unique
           - not null
+          
       - name: Desc. produto
         description: Define a descrição do produto
+
       - name: Cód. produto
         description: Define o ID Código do produto
+
       - name: Flag fab. pela empresa
         description: Define se o produto é fabricado pela empresa
+
       - name: Flag pode ser vendido
         description: Define se o produto pode ser vendido
+
       - name: Desc. cor produto
         description: Define a descrição da cor do produto
+
       - name: Medidas do produto
         description: Define as medidas do produto
+
       - name: Peso do produto
         description: Define o peso do produto
+
       - name: Qtde dias fabricacao
         description: Define a quantidade de dias de fabricação do produto
+
       - name: Linha do produto
         description: Define a linha de negocio do produto
+
       - name: Desc. prod. tamanha classe
         description: Define a descrição do produto tamanho classe
+
       - name: Desc. prod. estilo
         description: Define a descrição do produto estilo
+
       - name: Cód. subcateg. produto 
         description: Define o ID Código da subcategoria do produto
+
       - name: Cód. modelo produto
         description: Define o ID Código do modelo produto
+
       - name: Cód. categoria produto
         description: Define o ID Código da categoria produto
+
       - name: Desc. subcategoria prod.
         description: Define a descrição da subcategoria do produto
+
       - name: Desc. categoria prod.
         description: Define a descrição da categoria do produto
