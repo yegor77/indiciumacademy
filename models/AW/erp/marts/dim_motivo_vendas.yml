@@ -9,11 +9,15 @@ models:
         description: Chave primária da dimensão de motivo das vendas.
         tests:
           - not_null
+          
       - name: Cód. pedido
         description: Define ID Código do pedido
+
       - name: Cód. motivo venda
         description: Define o ID Código motivo de venda
+
       - name: Desc. motivo venda
         description: Define descrição do motivo de venda
+
       - name: Desc. Tipo de venda
         description: Define descrição do tipo de venda

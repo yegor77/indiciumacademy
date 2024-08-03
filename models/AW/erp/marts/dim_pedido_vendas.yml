@@ -42,39 +42,57 @@ models:
 
       - name: Cód. pedido
         description: Define o ID Código do pedido
+        
       - name: Cód. territorio
         description: Define o ID Código do território
+
       - name: Cód. metodo de envio
         description: Define o ID Código do metodo de envio
+
       - name: Cód. oferta especial
         description: Define o ID Código da oferta especial
+
       - name: Núm. revisao
         description: Define o número da revisão
+
       - name: Dt. pedido
         description: Define a Data do pedido
+
       - name: Status do pedido
         description: Define o status do pedido
+
       - name: Cód. status do pedido
         description: Define o ID Código do status do pedido
+
       - name: Tp de pedido
         description: Define o tipo de pedido
+
       - name: Cód. tp de pedido
         description: Define o ID Código do tipo de pedido
+
       - name: Qtde produto
         description: Define a quantidade de produto
+
       - name: Vlr. unitario
         description: Define o valor unitario
+
       - name: Vlr. desc. percentual
-        description: Define o valor de desconto percentuaç
+        description: Define o valor de desconto percentual
+
       - name: Vlr. subtotal
         description: Define o valor subtotal
+
       - name: Vlr. taxas
         description: Define o valor das taxas
+
       - name: Vlr. frete
         description: Define o valor de frete
+
       - name: Vlr. total pedido
         description: Define o valor total do pedido
+
       - name: Vlr. negociado
         description: Define o valor total negociado
+
       - name: Vlr. negociado liq.
         description: Define o valor negociado liquido
